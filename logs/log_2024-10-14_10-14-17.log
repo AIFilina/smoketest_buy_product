@@ -1,0 +1,17 @@
+
+-----
+Test: tests/test_buy_product.py::test_buy_cat_food (call)
+Start time: 2024-10-14 10:14:19.584306
+Start name method: Select category product
+
+End time: 2024-10-14 10:15:07.952055
+End name method: Select category product
+URL: https://www.sima-land.ru/korma-dlya-koshek/?c_id=39274&catalog=new-catalog
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_cat_food (call)
+Start time: 2024-10-14 10:15:07.958064
+Start name method: Select product
+

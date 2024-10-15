@@ -1,0 +1,17 @@
+
+-----
+Test: tests/test_buy_product.py::test_buy_smartphone (call)
+Start time: 2024-10-15 09:04:27.730494
+Start name method: Select category product
+
+End time: 2024-10-15 09:05:11.778223
+End name method: Select category product
+URL: https://comfy-shop.ru/category/smartfony
+
+-----
+
+-----
+Test: tests/test_buy_product.py::test_buy_smartphone (call)
+Start time: 2024-10-15 09:05:11.780491
+Start name method: Select product
+
