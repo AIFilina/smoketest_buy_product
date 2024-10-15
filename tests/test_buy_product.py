@@ -1,11 +1,13 @@
 from time import sleep
 
+import allure
+
 from pages.check_out_page import Check_out_page
 from pages.main_page import Main_page
 from pages.select_product_page import Select_product_page
 from tests.conftest import driver
 
-
+@allure.description("Test buy product 1")
 def test_buy_smartphone(driver):
     print("Start test buy 'Товар из категории Смартфоны'")
 

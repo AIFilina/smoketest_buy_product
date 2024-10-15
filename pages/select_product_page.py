@@ -1,5 +1,6 @@
 from time import sleep
 
+import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -177,36 +178,37 @@ class Select_product_page(Base):
     # Methods
 
     def select_product(self):
-        Logger.add_start_step("Select product")
-        self.get_current_url()
+        with allure.step("Select Product"):
+            Logger.add_start_step("Select product")
+            self.get_current_url()
 
-        self.click_sort_button()
-        self.click_price_down_button()
+            self.click_sort_button()
+            self.click_price_down_button()
 
-        self.input_filter_price_1()
-        self.input_filter_price_2()
+            self.input_filter_price_1()
+            self.input_filter_price_2()
 
-        self.click_filter_brand_1()
-        self.click_filter_brand_2()
-        self.click_filter_brand_3()
-        self.click_filter_brand_4()
+            self.click_filter_brand_1()
+            self.click_filter_brand_2()
+            self.click_filter_brand_3()
+            self.click_filter_brand_4()
 
-        self.click_filter_memory_1()
-        self.click_filter_memory_2()
+            self.click_filter_memory_1()
+            self.click_filter_memory_2()
 
-        self.click_filters_button()
+            self.click_filters_button()
 
-        sleep(2)
+            sleep(2)
 
-        name = self.get_product_name()
-        price= self.get_product_price()
+            name = self.get_product_name()
+            price= self.get_product_price()
 
-        self.click_product_buy_button()
-        sleep(2)
-        self.information(self.get_product_name(), name)
-        self.information(self.get_product_price(), price)
-        sleep(2)
-        self.click_cart_button()
+            self.click_product_buy_button()
+            sleep(2)
+            self.information(self.get_product_name(), name)
+            self.information(self.get_product_price(), price)
+            sleep(2)
+            self.click_cart_button()
 
-        self.assert_url(self.url_cart)
-        Logger.add_end_step(url=self.driver.current_url, method="Select product")
+            self.assert_url(self.url_cart)
+            Logger.add_end_step(url=self.driver.current_url, method="Select product")

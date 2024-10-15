@@ -1,5 +1,4 @@
-
-
+import allure
 from faker import Faker
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -127,20 +126,21 @@ class Check_out_page(Base):
     """METHODS"""
 
     def payment_product(self):
-        Logger.add_start_step("PAYMENT product")
+        with allure.step("Payment Product"):
+            Logger.add_start_step("PAYMENT product")
 
-        self.get_current_url()
+            self.get_current_url()
 
-        self.assert_word(self.get_cart_product_name(),"Смартфон Samsung Galaxy A55 5G 8/256Gb Awesome Lemon (Желтый)")
-        self.assert_word(self.get_cart_product_price(),"36090 руб.")
+            self.assert_word(self.get_cart_product_name(),"Смартфон Samsung Galaxy A55 5G 8/256Gb Awesome Lemon (Желтый)")
+            self.assert_word(self.get_cart_product_price(),"36090 руб.")
 
-        self.click_get_delivery_button()
-        self.input_user_name()
-        self.input_user_last_name()
-        self.input_user_phone()
-        self.input_user_mail()
-        self.click_address()
-        self.click_payment()
+            self.click_get_delivery_button()
+            self.input_user_name()
+            self.input_user_last_name()
+            self.input_user_phone()
+            self.input_user_mail()
+            self.click_address()
+            self.click_payment()
 
-        Logger.add_end_step(url=self.driver.current_url, method="Select product")
+            Logger.add_end_step(url=self.driver.current_url, method="Select product")
 

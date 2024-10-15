@@ -1,5 +1,5 @@
 
-
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -63,13 +63,14 @@ class Main_page(Base):
     # Methods
 
     def select_category(self):
-        Logger.add_start_step("Select category product")
-        self.driver.get(self.url)
-        self.driver.maximize_window()
-        self.get_current_url()
-        self.click_geo_button()
-        self.click_city_button()
-        self.move_to_category_1()
-        self.click_category_2()
-        self.assert_url(self.url_category)
-        Logger.add_end_step(url=self.driver.current_url, method="Select category product")
+        with allure.step("Select Category"):
+            Logger.add_start_step("Select category product")
+            self.driver.get(self.url)
+            self.driver.maximize_window()
+            self.get_current_url()
+            self.click_geo_button()
+            self.click_city_button()
+            self.move_to_category_1()
+            self.click_category_2()
+            self.assert_url(self.url_category)
+            Logger.add_end_step(url=self.driver.current_url, method="Select category product")
