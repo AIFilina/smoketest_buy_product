@@ -1,0 +1,37 @@
+Driver open
+Start test buy 'Товар из категории Смартфоны'
+Current url: https://comfy-shop.ru/
+Click geo button
+Click city button
+Move to category 1
+Click category 2
+Good value URL
+Current url: https://comfy-shop.ru/category/smartfony
+Click range to price button
+Click get price down button
+Input START PRICE
+Input START PRICE
+Click filter filter_brand_1
+Click filter filter_brand_2
+Click filter filter_brand_3
+Click filter filter_brand_4
+Click filter filter_brand_4
+Click filter filter_brand_4
+Click filter accept
+Click product buy button
+The expected information (Смартфон Samsung Galaxy A55 5G 8/256Gb Awesome Lemon (Желтый)) is the same as the actual one
+The expected information (36090₽) is the same as the actual one
+Click CART button
+Good value URL
+Current url: https://comfy-shop.ru/cart/checkout
+Good value: Смартфон Samsung Galaxy A55 5G 8/256Gb Awesome Lemon (Желтый)
+Good value: 36090 руб.
+Click delivery button
+Input NAME
+Input LAST NAME
+Input PHONE
+Input Mail
+Click address
+Click payment
+Finish test buy 'Товар из категории Смартфоны'
+Driver close
